@@ -1,6 +1,6 @@
 #include "register_types.h"
 
-#include "EventDeathWatch.h"
+#include "PredeleteWatcher.h"
 
 #include <godot_cpp/core/defs.hpp>
 #include <godot_cpp/godot.hpp>
@@ -14,7 +14,7 @@ void initialize_fortyone_sourcegenerator_class(ModuleInitializationLevel p_level
 		return ;
 	}
 
-	GDREGISTER_CLASS(EventDeathWatch);
+	GDREGISTER_CLASS(PredeleteWatcher);
 }
 
 void terminate_fortyone_sourcegenerator_class(ModuleInitializationLevel p_level)
@@ -27,7 +27,7 @@ void terminate_fortyone_sourcegenerator_class(ModuleInitializationLevel p_level)
 
 extern "C" {
 
-GDExtensionBool GDE_EXPORT fortyone_death_watcher_entrance(
+GDExtensionBool GDE_EXPORT fortyone_predelete_watcher_entrance(
 	GDExtensionInterfaceGetProcAddress p_get_proc_address,
 	const GDExtensionClassLibraryPtr p_library,
 	GDExtensionInitialization *r_initialization)
